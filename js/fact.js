@@ -2,7 +2,7 @@
 const randoLink = 'http://api.icndb.com/jokes/random?firstName=Chuck&amp;lastName=Norris';
 
 $(document).ready(function(){
-    getRandomJoke().then(() => {
+    getRandomJoke().then(function(){
         displayLikedCount();
         clickEvents();
     });
