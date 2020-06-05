@@ -1,0 +1,39 @@
+$primary-color: #C92A11;
+$body-font: "Roboto", Roboto;
+
+%image-shared{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body{
+    font-family:$body-font;
+}
+
+.header-image{
+    @extend %image-shared;
+    background-image: url('../img/header-image.jpg');
+    height:240px;   
+}
+
+.background-color{
+    background-color: $primary-color;
+}
+
+.footer-style{
+    background-image: linear-gradient($primary-color, white);
+    padding: 20px;
+    text-align: center;
+}
+
+.masthead {
+    @extend %image-shared;
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('../img/Chuck-Norris-featured-Image.jpg');
+  }
+
+  .navbar-toggler{
+    background-color:$primary-color;
+  }
