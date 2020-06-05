@@ -16,10 +16,10 @@ function getRandomJoke()
     return $.get(randoLink,function(result){
         if(result)
         {
-            let fact = result.value.joke;
-            let newfact = fact.replace(/(&quot\;)/g,"\"");
+            const joke = result.value.joke;
+            const newJoke = joke.replace(/(&quot\;)/g,"\"");
             $('.fact-message').text('');
-            $('.fact-message').text(newfact);
+            $('.fact-message').text(newJoke);
 
             //display with new fact
             $('#fact-block').removeClass('d-none').addClass('d-block');
@@ -35,8 +35,8 @@ function clickEvents()
         $.get(randoLink,function(result){
             if(result)
             {
-                let fact = result.value.joke;
-                let newfact = fact.replace(/(&quot\;)/g,"\"");
+                const fact = result.value.joke;
+                const newfact = fact.replace(/(&quot\;)/g,"\"");
                 $('#fact-message').text('');
                 $('#fact-message').text(newfact);
                 $('#fact-block').removeClass('d-none').addClass('d-block');
